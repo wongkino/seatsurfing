@@ -32,7 +32,7 @@ ADD healthcheck/ .
 RUN xx-go build -ldflags="-w -s" -o healthcheck . && xx-verify healthcheck
 
 FROM gcr.io/distroless/base-debian13@sha256:c83f022002fc917a92501a8c30c605efdad3010157ba2c8998a2cbf213299201
-LABEL org.opencontainers.image.source="https://github.com/seatsurfing/seatsurfing" \
+LABEL org.opencontainers.image.source="https://github.com/wongkino/seatsurfing" \
       org.opencontainers.image.url="https://seatsurfing.io" \
       org.opencontainers.image.documentation="https://seatsurfing.io/docs/"
 COPY --from=server-builder /go/src/app/main /app/
